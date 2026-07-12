@@ -12,14 +12,23 @@ class App(ctk.CTk):
         super().__init__()
 
         self.title("POS Tagging & Grammar Analyzer")
-        self.geometry("1400x900")
-        self.minsize(1200, 800)
 
-        ctk.set_appearance_mode("System")
-        ctk.set_default_color_theme("blue")
+        screen_width = self.winfo_screenwidth()
+        screen_height = self.winfo_screenheight()
+
+        width = int(screen_width * 0.9)
+        height = int(screen_height * 0.8)
+
+        x = (screen_width - width) // 2
+        y = (screen_height - height) // 2
+
+        self.geometry(f"{width}x{height}+{x}+{y}")
+        self.minsize(screen_width * 0.8, screen_height * 0.7)
+
+        ctk.set_appearance_mode("System") #Thems
+        ctk.set_default_color_theme("blue") # default colors
 
         self.configure_grid()
-
         self.create_widgets()
 
     def configure_grid(self):
