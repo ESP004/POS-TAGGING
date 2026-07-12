@@ -3,8 +3,10 @@ from tkinter import filedialog
 
 
 class InputFrame(ctk.CTkFrame):
-    def __init__(self, parent):
+    def __init__(self, parent, analyze_callback):
         super().__init__(parent)
+
+        self.analyze_callback = analyze_callback
 
         self.configure(fg_color="transparent")
 
@@ -66,7 +68,7 @@ class InputFrame(ctk.CTkFrame):
             button_frame,
             text="Analyze",
             width=120,
-            command=self.analyze_text
+            command=self.analyze_callback
         )
 
         self.clear_button = ctk.CTkButton(
