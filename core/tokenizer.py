@@ -14,5 +14,5 @@ class Tokenizer:
         if not text.strip():
             return []
         
-        # Temporary tokenizer
+        # tokenizer
         return word_tokenize(text)
