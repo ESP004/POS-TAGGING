@@ -33,8 +33,9 @@ Example:
 
 ```
 screenshots/
-    main_window_dark.png
-    main_window_light.png
+    Screensort_dark_barchart.png
+    Screensort_dark_pirchart.png
+    Screensort_light.png
 ```
 
 ---
